@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.example.intern.model.FileStorageProperties",
+      "name": "file",
+      "type": "com.example.intern.model.FileStorageProperties"
+    },
+    {
+      "sourceType": "com.example.intern.property.FileStorageProperties",
+      "name": "file",
+      "type": "com.example.intern.property.FileStorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.example.intern.model.FileStorageProperties",
+      "name": "file.upload-dir",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.example.intern.property.FileStorageProperties",
+      "name": "file.upload-dir",
+      "type": "java.lang.String"
+    }
+  ]
+}
