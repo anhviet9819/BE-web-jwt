@@ -6,15 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.intern.exception.DuplicateIdException;
 import com.example.intern.model.BenhNhan;
@@ -23,6 +15,7 @@ import com.example.intern.service.IBenhNhanService;
 import com.example.intern.service.IQuanHeService;
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/api/benhnhan")
 public class BenhNhanController {
 	
@@ -38,13 +31,16 @@ public class BenhNhanController {
 			@RequestParam(name = "diachi",required = false)String diachi){
 		return benhnhanService.queryByTenAndNgaysinhAndDiachi(ten,gioitinh,diachi);
 	}
-	
-	@GetMapping("/details/{id}")
-	public BenhNhan getOneById(@PathVariable("id") Long id) {
-		return benhnhanService.getOneById(id);
+
+	@GetMapping("/details/{taikhoanid}")
+	public BenhNhan getOneByTaikhoanId(@PathVariable("id") Long id) {
+		return benhnhanService.getOneByTaikhoanId(id);
 	}
-	
-	
+
+//	@GetMapping("/details/{id}")
+//	public BenhNhan getOneById(@PathVariable("id") Long id) {
+//		return benhnhanService.getOneById(id);
+//	}
 	
 	@PostMapping("/create")
 	public BenhNhan createBenhNhan(@Valid @RequestBody BenhNhan benhnhan) {

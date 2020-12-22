@@ -13,6 +13,7 @@ import com.example.intern.model.DonViTinh;
 import com.example.intern.service.IDonViTinhService;
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/api/donvitinh")
 public class DonViTinhController {
 	

@@ -13,6 +13,7 @@ import com.example.intern.model.DonThuoc;
 import com.example.intern.service.IDonThuocService;
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/api/donthuoc")
 public class DonThuocController {
 	

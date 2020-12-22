@@ -62,7 +62,12 @@ public class BenhNhanService implements IBenhNhanService {
 		if( benhnhan.size() ==0 ) throw new ResourceNotFoundException("BenhNhan");
 		return benhnhan;
 	}
-	
+
+	@Override
+	public BenhNhan getOneByTaikhoanId(Long benhnhanId) {
+		return benhnhanRepository.findByTaikhoanId(benhnhanId);
+	}
+
 	@Override
 	public BenhNhan getOneById(Long id) throws ResourceNotFoundException{
 		BenhNhan benhnhan = benhnhanRepository.getOne(id);

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 		uniqueConstraints = {
 			@UniqueConstraint(columnNames = "username")
 		})
-//@JsonIgnoreProperties({"username","password","sdt","hoten","hibernateLazyInitializer", "handler"})
+@JsonIgnoreProperties({"username","password","sdt","hoten","hibernateLazyInitializer", "handler"})
 public class TaiKhoan implements Serializable{
 	private static final long serialVersionUID = 1L;
 

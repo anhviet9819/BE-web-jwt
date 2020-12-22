@@ -7,6 +7,7 @@ import com.example.intern.model.BenhNhan;
 public interface IBenhNhanService {
 	
 	List<BenhNhan> queryByTenAndNgaysinhAndDiachi(String ten, Boolean gioitinh, String diachi);
+	BenhNhan getOneByTaikhoanId(Long benhnhanId);
 	BenhNhan getOneById(Long id);
 	BenhNhan save(BenhNhan benhnhan);
 	void delete(Long id);

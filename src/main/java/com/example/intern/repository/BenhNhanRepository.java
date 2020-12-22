@@ -10,7 +10,7 @@ import com.example.intern.model.BenhNhan;
 @Repository
 public interface BenhNhanRepository extends JpaRepository<BenhNhan, Long> {
 	//query
-	BenhNhan findByTaikhoanId(Long taikhoanid);
+	BenhNhan findByTaikhoanId(Long taikhoanId);
 	List<BenhNhan> findByTenContaining(String ten);
 	List<BenhNhan> findByGioitinh(Boolean gioitinh);
 	List<BenhNhan> findByDiachiContaining(String diachi);

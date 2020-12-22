@@ -13,6 +13,7 @@ import com.example.intern.model.Benh;
 import com.example.intern.service.IBenhService;
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/api/benh")
 public class BenhController {
 	

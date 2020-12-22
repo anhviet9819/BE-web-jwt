@@ -13,6 +13,7 @@ import com.example.intern.model.Thuoc;
 import com.example.intern.service.IThuocService;
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/api/thuoc")
 public class ThuocController {
 	

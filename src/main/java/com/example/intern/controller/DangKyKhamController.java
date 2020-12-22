@@ -14,6 +14,7 @@ import com.example.intern.model.DangKyKham;
 import com.example.intern.service.IDangKyKhamService;
 
 @RestController
+@CrossOrigin("http://localhost:8081")
 @RequestMapping("/api/dangkykham")
 public class DangKyKhamController {
 	
